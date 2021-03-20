@@ -16,7 +16,7 @@ export class DocumentDynamicService {
   }
 
   getDocumentDynamic(rout): Observable<any> {
-    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/portal/' + rout);
+    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/portal/' + rout);
   }
 
 }

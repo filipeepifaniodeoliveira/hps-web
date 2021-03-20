@@ -17,7 +17,7 @@ export class MenusService {
 
 
   getMenus(): Observable<any> {
-    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/menus/');
+    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/menus/');
   }
 
 }

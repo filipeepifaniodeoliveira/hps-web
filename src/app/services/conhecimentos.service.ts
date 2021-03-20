@@ -17,7 +17,7 @@ export class HomeService {
 
 
   getHome(): Observable<any> {
-    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/home/');
+    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/home/');
   }
 
 }
