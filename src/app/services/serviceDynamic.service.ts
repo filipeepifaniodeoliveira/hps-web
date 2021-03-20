@@ -16,7 +16,7 @@ export class DynamicPageService {
   }
 
   getDynamicPage(id): Observable<any> {
-    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/pagina/' + id);
+    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/pagina/' + id);
   }
 
 }

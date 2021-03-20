@@ -17,7 +17,7 @@ export class RodapeService {
 
 
   getRodape(): Observable<any> {
-    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/rodape/');
+    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/rodape/');
   }
 
 }

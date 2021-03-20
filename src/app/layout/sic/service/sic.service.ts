@@ -16,7 +16,7 @@ export class SicService {
   }
 
   getSic(): Observable<any> {
-    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/portal/SIC');
+    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/portal/SIC');
   }
 
 }

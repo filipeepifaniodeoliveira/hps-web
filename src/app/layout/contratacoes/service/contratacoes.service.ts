@@ -16,7 +16,7 @@ export class ContratacoesService {
   }
 
   getDocContratacoes(): Observable<any> {
-    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/portal/contratos_forn');
+    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/portal/contratos_forn');
   }
 
 }

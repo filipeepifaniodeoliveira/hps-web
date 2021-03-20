@@ -17,7 +17,7 @@ export class NoticiasService {
 
 
   getnoticias(): Observable<any> {
-    return this.httpClient.get<any>('http://hospitalpalmirasales.com/content/noticias/');
+    return this.httpClient.get<any>('https://hospitalpalmirasales.com/content/noticias/');
   }
 
 }
