@@ -1,0 +1,371 @@
+<nav [ngClass]="{ sidebarPushRight: isActive, collapsed: collapsed }" class="sidebar">
+    <div class="list-group">
+        <a [routerLinkActive]="['router-link-active']" class="list-group-item"(click)="addExpandClass('transparencia')">
+            <i class="fa fa-fw fa-hospital-o"></i>&nbsp;
+            <span>{{ 'Institucional' | translate }}</span>
+        </a>
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('estrutura')" class="list-group-item">
+                <i class="fa fa-fw fa-building"></i>&nbsp;
+                <span>{{ 'Estrutura Organizacional' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'estrutura'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/regimento')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Regimento Interno' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/organograma')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Organograma' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <a [routerLinkActive]="['router-link-active']" (click)="redirect('/membros')" class="list-group-item">
+            <i class="fa fa-fw fa-hospital-o"></i>&nbsp;
+            <span>{{ 'Membros Dirigentes' | translate }}</span>
+        </a>
+
+        
+        <div class="nested-menu">
+            <a (click)="addExpandClass('competencias')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Competências' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'competencias'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/leis')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Legislação' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/matrizes')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Matrizes de Competências' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('cg')" class="list-group-item" >
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Contrato de Gestão' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'cg'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/c_gestao')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Contrato de Gestão' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/t_aditivos')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Termos Aditivos' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('dg')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Decreto de Qualificação' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'dg'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/decreto')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Decreto de Qualificação' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"  (click)="redirect('/document/r_decreto')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Decreto de Renovação' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('es')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Estatuto Social' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'es'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/estatuto')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Estatuto Social' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/atas_est')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Atas do Estatuto Social' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('doc')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Documentações' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'doc'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentacoes/CNPJ')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'CNPJ' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentacoes/FGTS')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'FAZENDA PÚBLICA' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentacoes/SEGURIDADE_SOCIAL')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'SEGURIDADE SOCIAL' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentacoes/FGTS')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'FGTS' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentacoes/JUSTICA_DO_TRABALHO')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'JUSTIÇA DO TRABALHO' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentacoes/QUALIFICACAO_TECNICA')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'QUALIFICAÇÃO TÉCNICA' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentacoes/EXPERIENCIA_ANTERIOR')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'EXPERIÊNCIA ANTERIOR' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <a [routerLinkActive]="['router-link-active']" (click)="redirect('/documentos/covid')" class="list-group-item">
+            <i class="fa fa-fw fa-ambulance"></i>&nbsp;
+            <span>{{ 'Ações COVID-19' | translate }}</span>
+        </a>
+        <a [routerLinkActive]="['router-link-active']" (click)="redirect('/documentos/rel_fin_exec')" class="list-group-item">
+            <i class="fa fa-bar-chart-o"></i>&nbsp;
+            <span>{{ 'Rel. Fin. Exec. Contrato' | translate }}</span>
+        </a>
+        <a [routerLinkActive]="['router-link-active']" (click)="redirect('/documentos-mes-ano/dem_financeiros')" class="list-group-item">
+            <i class="fa fa-bar-chart-o"></i>&nbsp;
+            <span>{{ 'Dem. Financeiros' | translate }}</span>
+        </a>
+        <a [routerLinkActive]="['router-link-active']" (click)="redirect('/documentos/orcamento')" class="list-group-item">
+            <i class="fa fa-bar-chart-o"></i>&nbsp;
+            <span>{{ 'Orçamento Programa' | translate }}</span>
+        </a>
+        <a [routerLinkActive]="['router-link-active']"  (click)="redirect('/documentos/bens')" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>&nbsp;
+            <span>{{ 'Bens Públicos' | translate }}</span>
+        </a>
+        <a [routerLinkActive]="['router-link-active']" (click)="redirect('/documentos-mes-ano/repasses')" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>&nbsp;
+            <span>{{ 'Repasses Recebidos' | translate }}</span>
+        </a>
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('rlas')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Relatórios Assistenciais' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'rlas'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos-mes-ano/rel_ass_mensal')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Mensal' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos/rel_ass_anual')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Anual Consolidado' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('demcom')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Dem. Contábeis' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'demcom'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos/dem_contab')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Demonstrações' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos/pareces')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Pareceres' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('relas')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Contratações' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'relas'" class="nested">
+                <ul class="submenu">
+                    <span>DOCUMENTOS</span>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/regulamentoContrat')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Regulamento' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos-mes-ano/cotacoes')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Cotações' | translate }}</span>
+                        </a>
+                    </li>
+                    <span>CONTRATOS</span>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/contratacoes/OBRAS')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Obras' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/contratacoes/SERVICOS')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Serviços' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/contratacoes/BENS')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Bens' | translate }}</span>
+                        </a>
+                    </li>
+                    <span>PORTAL SÍNTESE</span>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/contratacoes/COMPRAS_FORNECEDOR')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Compras p/ fornecedor' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('RECUR')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Recursos Humanos' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'RECUR'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/document/regulamentoRH')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Regulamento' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos-mes-ano/servidores')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Servidores Cedidos' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos-mes-ano/est_remuneratoria')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Estrutura Remuneratória' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+
+
+        <div class="nested-menu">
+            <a (click)="addExpandClass('sicd')" class="list-group-item">
+                <i class="fa fa-bars"></i>&nbsp;
+                <span>{{ 'Serviço de Info. Cidadão' | translate }}</span>
+            </a>
+            <li [class.expand]="showMenu === 'sicd'" class="nested">
+                <ul class="submenu">
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/sic')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Atendimento Eletrônico' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/sic')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Atendimento Presencial' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" (click)="redirect('/documentos/rel_pai')">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>{{ 'Rel. Estatístico - PAI' | translate }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+    </div>
+    <div (click)="toggleCollapsed()" [ngClass]="{ collapsed: collapsed }" class="toggle-button">
+        <i class="fa fa-fw fa-angle-double-{{ collapsed ? 'right' : 'left' }}"></i>&nbsp;
+        <span>{{ 'Collapse Sidebar' | translate }}</span>
+    </div>
+</nav>

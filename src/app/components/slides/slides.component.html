@@ -1,0 +1,35 @@
+<!-- ======= Slider Section ======= -->
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class=""></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" data-src="holder.js/600x200?auto=yes&amp;bg=111&amp;fg=555&amp;text=First slide"
+                alt="First slide [400x400]" src="{{slideActive}}" data-holder-rendered="true">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Hospital Infantil Palmira Sales</h3>
+                <p>A serviço da vida e da saúde.</p>
+            </div>
+        </div>
+        <div class="carousel-item" *ngFor="let img of slides">
+            <img class="d-block w-100" data-src="holder.js/400x400?auto=yes&amp;bg=111&amp;fg=444&amp;text=Second slide"
+                alt="Second slide [400x400]" src="{{img}}" data-holder-rendered="true">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Estrutura e Equipe Qualificada </h3>
+                <p>Temos uma das melhores estruturas hospitalar da região e uma equipe preparada para melhor atender.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</a>
+<!-- End Slider -->

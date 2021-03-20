@@ -1,0 +1,63 @@
+<div [@routerTransition]>
+    <ngx-spinner></ngx-spinner>
+    <div class="container-fluid" *ngIf="showData">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 title">
+            <h1 class="h3 mb-0 text-gray-800">{{title}}</h1>
+        </div>
+        
+        <div class="row">
+            <p class="col-lg-8 col-md-8 mb-4"> </p>
+        </div>
+        
+        <div class="row"><!-- Content Row -->
+            <div class="col-lg-11 col-md-11 mb-4"><!-- Content Column -->
+                <div class="row">
+                    <p class="col-lg-2 col-md-2 mb-2 text-secondary font-weight-bold">Nome OSS</p>
+                    <p class="col-lg-7 col-md-7 mb-2">{{content.nome_oss}}</p>
+                </div>
+                <div class="row">
+                    <p class="col-lg-2 col-md-2 mb-2 text-secondary font-weight-bold">CNPJ OSS</p>
+                    <p class="col-lg-7 col-md-7 mb-2">{{content.cnpj_oss}}</p>
+                </div>
+                
+                <div class="row">
+                    <p class="col-lg-6 col-md-4 mb-2 text-secondary font-weight-bold">Apresentação da OSS</p>
+                </div>
+                
+                <div [innerHTML]="content.ds_empresa" style="text-align: justify;">
+                </div>
+                
+                
+                <div class="row">
+                    <p class="col-lg-2 col-md-4 mb-2 text-secondary font-weight-bold">Nome Unidade</p>
+                    <p class="col-lg-7 col-md-7 mb-2">{{content.nm_empresa}}</p>
+                </div>
+                <div class="row">
+                    <p class="col-lg-2 col-md-4 mb-2 text-secondary font-weight-bold">CNPJ Unidade</p>
+                    <p class="col-lg-7 col-md-7 mb-2">{{content.cnpj_unidade}}</p>
+                </div>
+                
+                <div class="row">
+                    <p class="col-lg-2 col-md-4 mb-2 text-secondary font-weight-bold">Endereço</p>
+                    <p class="col-lg-7 col-md-7 mb-2">{{content.endereco}}</p>
+                </div>
+                <div class="row">
+                    <p class="col-lg-2 col-md-4 mb-2 text-secondary font-weight-bold">Telefone</p>
+                    <p class="col-lg-7 col-md-7 mb-2">{{content.telefone}}</p>
+                </div>
+                <div class="row">
+                    <p class="col-lg-2 col-md-4 mb-2 text-secondary font-weight-bold">Funcionamento</p>
+                    <p class="col-lg-2 col-md-7 mb-2">{{content.horario}}</p>
+                </div>
+                    
+                <br>
+                <br>
+                
+                <div class="row">
+                    <p class="col-lg-7 col-md-7 mb-2"> Última atualização em {{dt_atualizacao}}</p>
+                </div>
+                
+            </div><!--End column-->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div [@routerTransition]>
+    <ngx-spinner></ngx-spinner>
+    <div class="container-fluid" *ngIf="showData">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 title">
+            <h1 class="h3 mb-0 text-gray-800">Serviço de Informação ao Cidadão - SIC</h1>
+        </div>
+        
+        <div class="row">
+            <p class="col-lg-8 col-md-8 mb-4"> </p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-11 col-md-11 mb-4">     
+                <div [innerHTML]="sicPresencial" style="text-align: justify;">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-11 col-md-11 mb-4">     
+                <div [innerHTML]="sicEletronico" style="text-align: justify;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

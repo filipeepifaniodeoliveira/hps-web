@@ -1,0 +1,74 @@
+<div [@routerTransition]>
+    <ngx-spinner></ngx-spinner>
+    <div class="container-fluid" *ngIf="showData">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 title">
+            <h1 class="h3 mb-0 text-gray-800">{{title}}</h1>
+        </div>
+        
+        <div class="row">
+            <p class="col-lg-11 col-md-8 mb-4">{{desc}} </p>
+        </div>
+
+        <div class="row">   
+            <div class="col-lg-11 col-md-11 mb-4">  
+                <div class="card shadow mb-4">  
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-secondary subtitleGeneralMobile">{{title}}</h6> 
+                        <div>
+                            <div class="formul" *ngFor="let ano of arrayAnos">
+                                <form action="/action_page.php" method="get">
+                                    <input type="checkbox" id="{{ano.id}}" name="{{ano.ano}}" value="{{ano.ano}}" [checked]=[ano.show] (click)="selectFilter(ano.ano)" class="input">
+                                    <label for="{{ano.id}}" class="label labelStyle">{{ano.ano}}</label><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table" *ngFor="let item of arrayItens">
+                            <ng-container *ngIf="item.show">
+                                <tbody >
+                                    <tr class="noBorderTop">
+                                        <th><span class="ano subtitleGeneralMobile">{{item.ano}}</span></th>
+                                        <th></th>
+                                    </tr>
+                                </tbody>
+
+                                <tbody *ngFor="let obj of item.meses">
+                                    <tr class="padding-area">
+                                        <th class="styleLettwe mesDocks" rowspan="obj.qtdArq"> {{obj.mes}} </th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="BorderColler descritivoTable">
+                                        <th>Nome</th>
+                                        <th><span class="floatRight margAlterRigth">Url</span></th>
+                                    </tr>
+                                    <tr *ngFor="let file of obj.files" class="noBold">
+                                        <td class="nameDocks">{{file.nome}}</td>
+                                        <td>
+                                            <a href="{{url}}{{file.caminho}}" download="{{url}}{{file.caminho}}" target="_blank" class="floatRight btn btn-sm btn-success shadow-sm">
+                                                <i class="fa fa-download fa-sm text-white-50"></i> Download
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </ng-container>
+                            <br />
+                            <br />
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"><!-- Content Row -->
+            <div class="col-lg-11 col-md-11 mb-4"><!-- Content Column -->
+                
+                <div class="row">
+                    <p class="col-lg-7 col-md-7 mb-2"> Última atualização em {{dt_atualizacao}}</p>
+                </div>
+                
+            </div><!--End column-->
+        </div>
+    </div>
+</div>

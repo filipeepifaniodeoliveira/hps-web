@@ -1,0 +1,205 @@
+<app-navbar></app-navbar>
+<body data-spy="scroll" data-target="#navbar-example" *ngIf="showData">  
+    <div id="topy"></div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="gambaia">
+          <ngb-carousel>
+              <ng-template *ngFor="let slider of sliders" ngbSlide>
+                  <img
+                      [src]="slider.imagePath"
+                      alt="Random first slide"
+                      class="img-fluid mx-auto d-block"
+                      width="100%"
+                  />
+                  <div class="carousel-caption">
+                      <h3 class="gambaia">{{ slider.label }}</h3>
+                      <p class="gambaia">{{ slider.text }}</p>
+                  </div>
+              </ng-template>
+          </ngb-carousel>
+        </div>
+      </div>
+    </div>
+  
+    <main id="main">
+      <div id="sobre" class="sobre"></div>
+
+      <!-- ======= INICIO ======= -->
+      <div class="about-area area-padding">
+        <div class="container">
+          <div class="row" >
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2 class="bottom-margin" >{{inicio.titulo}}</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- single-well start-->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="well-left">
+                <div class="single-well">
+                  <a href="#">
+                    <img src="{{inicio.imagem}}" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- single-well end-->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="well-middle">
+                <div class="single-well">
+                  <div [innerHTML]="descritivoInicio"></div>
+                </div>
+              </div>
+            </div>
+            <!-- End col-->
+          </div>
+        </div>
+        <div id="servicos"></div>
+      </div><!-- End INICIO -->
+  
+      <!-- ======= Services Section ======= -->
+      <div class="services-area area-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline services-head text-center">
+                <h2 class="bottom-margin">Nossos Serviços</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center" >
+            <!-- Start Left services -->
+            <div class="col-md-4 col-sm-4 col-xs-12" *ngFor="let servico of servicos; let i = index">
+              <div class="about-move">
+                <div class="services-details">
+                  <div class="single-services">
+                    <a class="services-icon" href="#">
+                      <i class="fa fa-hospital-o"></i>
+                    </a>
+                    <h4>{{servico.servico}}</h4>
+                    <p>
+                      {{servico.descricao}}
+                    </p>
+                  </div>
+                </div>
+                <!-- end about-details -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- End Services Section -->
+  
+      <!-- ======= Testimonials Section ======= -->
+      <div class="testimonials-area">
+        <div class="testi-inner area-padding">
+          <div class="testi-overly"></div>
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <!-- Start testimonials Start -->
+                <div class="testimonial-content text-center">
+                  <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
+                  <!-- start testimonial carousel -->
+                  <div class="testimonial-carousel">
+                    <div class="single-testi" *ngIf="carrosel === 1">
+                      <div class="testi-text">
+                        <div [innerHTML]="depo01Texto"></div>
+                        <div [innerHTML]="depo01Title"></div>
+                        <h3>. . .</h3>
+                      </div>
+                    </div>
+                    <!-- End single item -->
+                    <div class="single-testi" *ngIf="carrosel === 2">
+                      <div class="testi-text">
+                        <div [innerHTML]="depo02Texto"></div>
+                        <div [innerHTML]="depo02Title"></div>
+                        <h3>. . .</h3>
+                      </div>
+                    </div>
+                    <!-- End single item -->
+                    <div class="single-testi" *ngIf="carrosel === 3">
+                      <div class="testi-text">
+                        <div [innerHTML]="depo03Texto"></div>
+                        <div [innerHTML]="depo03Title"></div>
+                        <h3>. . .</h3>
+                      </div>
+                    </div>
+                    <!-- End single item -->
+                  </div>
+                </div>
+                <!-- End testimonials end -->
+              </div>
+              <!-- End Right Feature -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Testimonials Section -->
+
+      <div id="time" class="sobre"></div>
+
+  
+      <!-- ======= Team Section ======= -->
+      <div  class="our-team-area area-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2 class="bottom-margin">Direção</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row" [innerHTML]="htmlTime"></div>
+          <div id="noticias"></div>
+        </div>
+      </div><!-- End Team Section -->
+
+  
+      <!-- ======= Blog Section ======= -->
+      <div class="blog-area">
+        <div class="blog-inner area-padding">
+          <div class="blog-overly"></div>
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="section-headline text-center bottom-margin">
+                  <h2 class="bottom-margin">Notícias</h2>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row"> -->
+              <!-- Start Left Blog -->
+              <div class="row" [innerHTML]="htmlDestaques"></div>
+
+              <!-- End Right Blog-->
+            <!-- </div> -->
+          </div>
+        </div>
+      </div><!-- End Blog Section -->
+  
+      <!-- ======= Suscribe Section ======= -->
+      <div class="suscribe-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
+              <div class="suscribe-text text-center">
+                <h3>Hospital Infantil Palmira Sales</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Suscribe Section -->
+  
+    </main><!-- End #main -->
+
+    <app-footer></app-footer>
+  
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div> 
+</body>
+<ngx-spinner></ngx-spinner>

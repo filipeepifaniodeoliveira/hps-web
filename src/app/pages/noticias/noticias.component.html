@@ -1,0 +1,81 @@
+<app-navbar-fake></app-navbar-fake>
+
+<body data-spy="scroll" data-target="#navbar-example">
+  <main id="main">
+    <div class="header-bg page-area">
+      <div class="home-overly"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="slider-content text-center blogPD">
+              <div class="header-bottom">
+                <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+                  <h1 class="title2">Notícias </h1>
+                </div>
+                <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
+                  <h2 class="title3">Acompanhe o que acontece no HIPS</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="about-area area-padding " *ngIf="showData">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2 class="pegasystem">Notícias</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row" *ngFor="let noticia of noticias">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="page-head-blog border-blog">
+              <div class="">
+                <div class="left-blog">
+                  <h4>{{noticia.titulo}}</h4>
+                  <div class="recent-post">
+                    <div class="recent-single-post"
+                      [innerHTML]="noticia.texto"
+                    >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="noticia.Carrossel.length > 0">
+                <ngb-carousel>
+                  <ng-template *ngFor="let img of noticia.Carrossel " ngbSlide>
+                    <img
+                      [src]="img"
+                      alt="Random first slide"
+                      class="img-fluid mx-auto d-block"
+                      width="100%"
+                    />
+                  </ng-template>
+                </ngb-carousel>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <app-footer></app-footer>
+
+  <!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+<ngx-spinner></ngx-spinner>

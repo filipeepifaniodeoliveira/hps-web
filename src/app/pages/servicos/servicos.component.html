@@ -1,0 +1,553 @@
+<app-navbar></app-navbar>
+
+<body data-spy="scroll" data-target="#navbar-example">
+    <main id="main">
+        <div class="header-bg page-area">
+            <div class="home-overly"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="slider-content text-center blogPD">
+                            <div class="header-bottom">
+                                <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+                                    <h1 class="title2">Nossos Serviços </h1>
+                                </div>
+                                <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
+                                    <h2 class="title3">Conheça alguns de nossos serviços</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-page area-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="page-head-blog">
+                            <div class="single-blog-page">
+                                <div class="left-blog">
+                                    <h4> Serviços </h4>
+                                    <ul>
+                                        <li>
+                                            <a (click)="setComponent('ambulatorio')"> AMBULATÓRIO </a>
+                                        </li>
+                                        <li>
+                                            <a (click)="setComponent('exames')"> EXAMES LABORATORIAIS </a>
+                                        </li>
+                                        <li>
+                                            <a (click)="setComponent('obstetrica')"> CLÍNICA OBSTÉTRICA </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <article class="blog-post-wrapper">
+                                    <div class="post-information" *ngIf="ambulatorio">
+                                        <h2>AMBULATÓRIO</h2>
+                                        <div class="entry-meta"></div>
+                                        <div class="entry-content">
+                                            <p>
+                                                O ambulatório do Hospital Infantil Palmira Sales é o local onde são
+                                                realizadas as consultas médicas e os exames que são encaminhados pelos
+                                                médicos do hospital e/ou de postos de saúde.
+                                            </p>
+                                            <p>
+                                                Atendimento de Segunda à sexta das 07 às 18 horas.
+                                            </p>
+                                        </div>
+                                        <div class="post-thumbnail">
+                                            <img src="../../../assets/img/estrutura/ambulatorio.jpg" alt="" />
+                                        </div>
+                                        <!-- ======= Blog Section ======= -->
+                                        <div id="blog" class="blog-area">
+                                            <div class="blog-inner area-padding">
+                                                <div class="blog-overly"></div>
+                                                <div class="container ">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="section-headline text-center">
+                                                                <h2>Atendimento</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <h4>
+                                                                        <a href="blog.html">Segundas</a>
+                                                                    </h4>
+
+                                                                    <ul class="list-group">
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Dermatologista
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dra.
+                                                                                Danyelle Rego</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Cirurgia Geral
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Gilson Bezerra</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Cirurgia Pediátrica
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Ricardo Ventura</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Neurologista
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dra.
+                                                                                Ylana Guerra</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <h4>
+                                                                        <a href="blog.html">Terças</a>
+                                                                    </h4>
+
+                                                                    <ul class="list-group">
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Ostetricia
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Learsi Dinelli</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Neurologista
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Luiz Moroni</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Pediatra
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dra.
+                                                                                Maria de Fátima Falcão</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Cirurgia Geral
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Pedro Ferreira</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Cardiologista
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Pedro Henrique</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Endocrinologista
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Rodrigo Agra</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <h4>
+                                                                        <a href="blog.html">Quartas</a>
+                                                                    </h4>
+
+                                                                    <ul class="list-group">
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Radiologista USG
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dra.
+                                                                                Juliana Carla</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Cirurgia Geral
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                José Rodrigues</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Ginecologisa
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Marcos Cunha</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Pediatra
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dra.
+                                                                                Maria do Carmo Cavalcanti </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <h4>
+                                                                        <a href="blog.html">Quintas</a>
+                                                                    </h4>
+
+                                                                    <ul class="list-group">
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Ortopedia
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Airton Pedrosa </span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Urologia
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Danilo Guerra</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Cirurgia Geral
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Gilson Bezerra</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Urologia
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dra.
+                                                                                Marcos Gomes </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <h4>
+                                                                        <a href="blog.html">Sextas</a>
+                                                                    </h4>
+
+                                                                    <ul class="list-group">
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Radiologia USG
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Eduardo Lourenço</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Urologista
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Guilherme Agra</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Ginecologia
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Learsi Dinelli </span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Pediatra
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dra.
+                                                                                Leonila Torres</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Oftalmologia
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Ricardo Tavares</span>
+                                                                        </li>
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Ortopedia
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Paulo Monteiro </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <h4>
+                                                                        <a href="blog.html">Sextas</a>
+                                                                    </h4>
+                                                                    <p>
+                                                                        OBSERVAÇÃO: Este exame é realizado aos
+                                                                        sábados a cada quinze dias
+                                                                    </p>
+                                                                    <ul class="list-group">
+                                                                        <li
+                                                                            class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Radiologia USG
+                                                                            <span
+                                                                                class="badge badge-primary badge-pill">Dr.
+                                                                                Eduardo Lourenço</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="post-information" *ngIf="exames">
+                                        <h2>EXAMES LABORATRIAIS</h2>
+                                        <div class="entry-meta"></div>
+                                        <div class="entry-content">
+                                            <p>
+                                                O Hospital Infantil Palmira Sales, em parceria contratual com a
+                                                Secretaria de Saúde do Município de Garanhuns, atende cerca de 180
+                                                mulheres gestantes, em trabalho de parto, de Garanhuns e cidades
+                                                circunvizinhas.
+                                            </p>
+                                        </div>
+                                        <div class="post-thumbnail">
+                                            <img src="../../../assets/img/estrutura/ambulatorio.jpg" alt="" />
+                                        </div>
+
+                                        <div id="blog" class="blog-area">
+                                            <div class="blog-inner area-padding">
+                                                <div class="blog-overly"></div>
+                                                <div class="container ">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="section-headline text-center">
+                                                                <h2>Exames</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <ul class="list-group">
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Exames Laboratoriais
+                                                                            <span class="badge badge-primary badge-pill">Terceirizadas</span>
+                                                                        </li>
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            ​Ultrassonografia -  USG
+                                                                            <span class="badge badge-primary badge-pill">Também da mama</span>
+                                                                        </li>
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Eletrocardiograma - ECO
+                                                                        </li>
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Raio X
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+   
+                                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="single-blog">
+                                                                <div class="blog-text">
+                                                                    <ul class="list-group">
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Teste do Pezinho
+                                                                        </li>
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            ​Teste do Olhinho
+                                                                        </li>
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Teste fa Orelhinha
+                                                                        </li>
+                                                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                                            Curativos
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-information" *ngIf="obstetrica">
+                                        <h2>OBSTETRÍCIA</h2>
+                                        <div class="entry-meta"></div>
+                                        <div class="entry-content">
+                                            <p>
+                                                O Hospital Infantil Palmira Sales, em parceria contratual com a
+                                                Secretaria de Saúde do Município de Garanhuns, atende cerca de 180
+                                                mulheres gestantes, em trabalho de parto, de Garanhuns e cidades
+                                                circunvizinhas.
+                                            </p>
+                                        </div>
+                                        <div class="post-thumbnail">
+                                            <img src="../../../assets/img/estrutura/obstetrica.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </article>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <div class="footer-logo">
+                                    <h2><span>e</span>Business</h2>
+                                </div>
+
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                                <div class="footer-icons">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-google"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>information</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </p>
+                                <div class="footer-contacts">
+                                    <p><span>Tel:</span> +123 456 789</p>
+                                    <p><span>Email:</span> contact@example.com</p>
+                                    <p><span>Working Hours:</span> 9am-5pm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>Instagram</h4>
+                                <div class="flicker-img">
+                                    <a href="#"><img src="assets/img/portfolio/1.jpg" alt=""></a>
+                                    <a href="#"><img src="assets/img/portfolio/2.jpg" alt=""></a>
+                                    <a href="#"><img src="assets/img/portfolio/3.jpg" alt=""></a>
+                                    <a href="#"><img src="assets/img/portfolio/4.jpg" alt=""></a>
+                                    <a href="#"><img src="assets/img/portfolio/5.jpg" alt=""></a>
+                                    <a href="#"><img src="assets/img/portfolio/6.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-area-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="copyright text-center">
+                            <p>
+                                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
+                            </p>
+                        </div>
+                        <div class="credits">
+                            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+            -->
+                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/appear/jquery.appear.js"></script>
+    <script src="assets/vendor/knob/jquery.knob.js"></script>
+    <script src="assets/vendor/parallax/parallax.js"></script>
+    <script src="assets/vendor/wow/wow.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/nivo-slider/js/jquery.nivo.slider.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>

@@ -1,0 +1,52 @@
+<div [@routerTransition]>
+    <ngx-spinner></ngx-spinner>
+    <div class="container-fluid" *ngIf="showData">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 title">
+            <h1 class="h3 mb-0 text-gray-800">{{title}}</h1>
+        </div>
+        
+        <div class="row">
+            <p class="col-lg-8 col-md-8 mb-4">{{desc}} </p>
+        </div>
+
+        <div class="row">   
+            <div class="col-lg-11 col-md-11 mb-4">  
+                <div class="card shadow mb-4">  
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-secondary subtitleGeneralMobile">{{title}}</h6>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr class="noBorderTop descritivoTable">
+                                    <th>Descrição</th>
+                                    <th><span class="floatRight margAlterRigth">Url</span></th>
+                                </tr>
+                                <ng-container *ngFor="let doc of content">
+                                    <tr>
+                                        <td class="nameDocks">{{doc.nome}}</td>
+                                        <td>
+                                            <a href="{{url}}{{doc.caminho}}" download="{{url}}{{doc.caminho}}" target="_blank" class=" floatRight btn btn-sm btn-success shadow-sm">
+                                                <i class="fa fa-download fa-sm text-white-50"></i> Download
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </ng-container>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"><!-- Content Row -->
+            <div class="col-lg-11 col-md-11 mb-4"><!-- Content Column -->
+                
+                <div class="row">
+                    <p class="col-lg-7 col-md-7 mb-2"> Última atualização em {{dt_atualizacao}}</p>
+                </div>
+                
+            </div><!--End column-->
+        </div>
+    </div>
+</div>

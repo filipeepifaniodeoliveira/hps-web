@@ -1,0 +1,81 @@
+<!-- ======= Footer ======= -->
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <div class="footer-logo">
+                                <img  class="footer-logo-bold" src={{logo}} alt="">
+                            </div>
+                            <div [innerHTML]="text_html"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single footer -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>Informações</h4>
+                            <p>
+                                Fale conosco através de um de nossos canais de comunicação.
+                            </p>
+                            <div class="footer-contacts">
+                                <p><span>Tel:</span> {{endereco.telefone}}</p>
+                                <p><span>Email:</span> {{endereco.email}}</p>
+                            </div>
+                            <h4 class="padding-small">Endereço</h4>
+                            <div class="footer-contacts">
+                                <p><span>Rua:</span> {{endereco.logradouro}}, {{endereco.numero}}, {{endereco.bairro}}  </p>
+                                <p><span>Cidade:</span> {{endereco.cidade}} / {{endereco.uf}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end single footer -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>Instagram</h4>
+                            <div class="flicker-img">
+                                <a href={{linkIntagram}}><img src="assets/img/estrutura/ambulatorio.jpg" alt=""></a>
+                                <a href={{linkIntagram}}><img src="assets/img/estrutura/irmas.jpg" alt=""></a>
+                                <a href={{linkIntagram}}><img src="assets/img/estrutura/obstetrica.jpg" alt=""></a>
+                                <a href={{linkIntagram}}><img src="assets/img/estrutura/sala_espera.jpg" alt=""></a>
+                                <a href={{linkIntagram}}><img src="assets/img/estrutura/recepcao.jpg" alt=""></a>
+                                <a href={{linkIntagram}}><img src="assets/img/estrutura/entrada.jpg" alt=""></a>
+                                <div class="footer-icons">
+                                    <ul>
+                                        <li class="padding-icon">
+                                            <a href={{linkFacebook}}><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href={{linkIntagram}}><i class="fa fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-area-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright text-center">
+                        <p>
+                            &copy; Copyright <strong>eBusiness</strong>
+                        </p>
+                    </div>
+                    <div class="credits">
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End  Footer -->
